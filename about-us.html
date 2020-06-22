@@ -1,0 +1,194 @@
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>About Us: Almost Matching Exactly Lab</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="simple-sidebar.css" rel="stylesheet">
+  <!--Additional custom styling -->
+  <link href="additional.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+<!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper"><div id="sidebar-content">
+	  <a href="index.html"><div class="sidebar-heading sidebar-heading-logo"><img class = "logo-alt2" src = "logos/logo_alt2.svg" alt = "duke logo"></div></a>
+      <div class="list-group list-group-flush">
+		<a href="about-us.html" class="list-group-item list-group-item-action bg-light">About Us</a>
+        <a href="choosing-an-algorithm.html" class="list-group-item list-group-item-action bg-light">Choosing an Algorithm</a>
+		<a id="flip" class="dropdown-btn list-group-item list-group-item-action bg-light" style="color:#495057">Getting Started<i class="fa fa-chevron-down" style="font-size:16px"></i></a>
+        <div id="flipped" class="dropdown-container">
+          <a href="dame.html" class="list-group-item list-group-item-action bg-light">DAME</a>
+          <a href="flame.html" class="list-group-item list-group-item-action bg-light">FLAME</a>
+          <a href="malts.html" class="list-group-item list-group-item-action bg-light">MALTS</a>
+		  <a href="ahb.html" class="list-group-item list-group-item-action bg-light">AHB</a>
+        </div>
+        <a href="tutorials.html" class="list-group-item list-group-item-action bg-light">Tutorials</a>
+        <a href="additional-resources.html" class="list-group-item list-group-item-action bg-light">Additional Resources</a>
+      </div>
+    </div></div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom"> -->
+        <!-- <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button> -->
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        <!-- </button> -->
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+          <!-- <ul class="navbar-nav ml-auto mt-2 mt-lg-0"> -->
+            <!-- <li class="nav-item active"> -->
+              <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item"> -->
+              <!-- <a class="nav-link" href="#">Link</a> -->
+            <!-- </li> -->
+            <!-- <li class="nav-item dropdown"> -->
+              <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+                <!-- Dropdown -->
+              <!-- </a> -->
+              <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> -->
+                <!-- <a class="dropdown-item" href="#">Action</a> -->
+                <!-- <a class="dropdown-item" href="#">Another action</a> -->
+                <!-- <div class="dropdown-divider"></div> -->
+                <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+              <!-- </div> -->
+            <!-- </li> -->
+          <!-- </ul> -->
+        <!-- </div> -->
+      <!-- </nav> -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="height:61px">
+        <button class="navbar-toggler" id="menu-toggle" onclick="changeMenuText()"><span id="menuText"><span class="navbar-toggler-icon"></span></button>
+        <ul class="navbar-nav ml-auto mt-lg-0">
+          <a class="nav-link" href="https://github.com/almost-matching-exactly" target="_blank"><i class="fa fa-github"></i> Github</a>
+        </ul>
+      </nav>
+
+      <div class="container-fluid" style="padding-bottom: 50px">
+        <div class="banner"><h1 class="title mt-4">About Us</h1></div>
+		<div class="container">
+			<h2 class="underline">Co-Directors: <i id="plusDirector" onclick="expand('director');minus(this.id)" class="fa fa-minus-square-o"></i></h2>
+			<div id="director">
+			<div class="row">
+				<div class="col">
+					<table class="table table-borderless" style="margin-bottom:5px;width:85%;margin-left:auto;margin-right:auto">
+						<tbody>
+						  <tr>
+							<td data-href="https://users.cs.duke.edu/~cynthia/" class="people">
+								<img class="picture" src="peoplephotos/CynthiaRudin_cropped.jpg" alt = "CynthiaRudin.jpg"><br>
+								<h3><center>Cynthia Rudin</center></h3><br>
+								<span class="people-cap"><center>Department of Computer Science</center></span></td>
+							<td data-href="https://volfovsky.github.io/" class="people">
+								<img class="picture" src="peoplephotos/AlexanderVolfovsky_cropped.jpg" alt = "AlexanderVolfovsky.jpg"><br>
+								<h3><center>Alexander Volfovsky</center></h3><br>
+								<span class="people-cap"><center>Department of Statistics</center></span></td>
+							<td data-href="https://users.cs.duke.edu/~sudeepa/" class="people">
+								<img class="picture" src="peoplephotos/SudeepaRoy_cropped.jpg" alt = "SudeepaRoy.jpg"><br>
+								<h3><center>Sudeepa Roy</center></h3><br>
+								<span class="people-cap" style="margin-right:5px"><center>Department of Computer Science</center></span></td>
+						  </tr>
+						 </tbody>
+					</table>
+				</div>
+			</div>
+			</div>
+			<h2 class="underline">PhD Students: <i id="plusPhD" onclick="expand('PhD');minus(this.id)" class="fa fa-minus-square-o"></i></h2>
+			<div id="PhD">
+			<div class="row">
+				<div class="col">
+					<table class="table table-borderless" style="margin-bottom:15px;width:85%;margin-left:auto;margin-right:auto">
+						<tbody>
+						  <tr>
+							<td data-href="https://stat.duke.edu/people/vittorio-orlandi"  class="people">
+								<img class="picture" src="peoplephotos/VittorioOrlandi_cropped.jpg" alt = "VittorioOrlandi.jpg"><br>
+								<h3><center>Vittorio Orlandi</center></h3><br>
+								<span class="people-cap"><center>Department of Statistics</center></span></td>
+							<td data-href="https://marcomorucci.com//bio/" class="people">
+								<img class="picture" src="peoplephotos/MarcoMorucci.jpg" alt = "MarcoMorucci.jpg"><br>
+								<h3><center>Marco Morucci</center></h3><br>
+								<span class="people-cap"><center>Department of Political Science</center></span></td>
+							<td data-href="https://www.linkedin.com/in/musaidawan/" class="people">
+								<img class="picture" src="peoplephotos/MuhammadUsaidAwan_cropped.jpg" alt = "MuhammadUsaidAwan.jpg"><br>
+								<h3><center>Muhammad Usaid Awan</center></h3><br>
+								<span class="people-cap"><center>Department of Economics</center></span></td>
+						  </tr><tr>
+							<td data-href="https://www.cs.duke.edu/people/graduates/705" class="people">
+								<img class="picture" src="peoplephotos/TianyuWang_cropped.jpg" alt = "TianyuWang.jpg"><br>
+								<h3><center>Tianyu Wang</center></h3><br>
+								<span class="people-cap"><center>Department of Computer Science</center></span></td>
+							<td data-href="https://sites.google.com/view/harshparikh/" class="people">
+								<img class="picture" src="peoplephotos/HarshParikh_cropped.jpg" alt = "HarshParikh.jpg"><br>
+								<h3><center>Harsh Parikh</center></h3><br>
+								<span class="people-cap" style="margin-right:5px"><center>Department of Computer Science</center></span></td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			</div>
+			<h2 class="underline">Interns: <i id="plusIntern" onclick="expand('intern');minus(this.id)" class="fa fa-minus-square-o"></i></h2>
+ 			<div id="intern">
+			<div class="row">
+				<div class="col">
+					<table class="table table-borderless" style="margin-bottom:15px;width:85%;margin-left:auto;margin-right:auto">
+						<tbody>
+						  <tr>
+							<td data-href="#"  class="people">
+								<img class="picture" src="peoplephotos/ThomasHowell.jpg" alt = "ThomasHowell.jpg"><br>
+								<h3><center>Thomas Howell</center></h3></td>
+							<td data-href="#" class="people">
+								<img class="picture" src="peoplephotos/AngikarGhosal.jpg" alt = "AngikarGhosal.jpg"><br>
+								<h3><center>Angikar Ghosal</center></h3></td>
+							<td data-href="#" class="people">
+								<img class="picture" src="peoplephotos/XianSun.jpg" alt = "XianSun.jpg"><br>
+								<h3><center>Xian Sun</center></h3></td>
+						  </tr><tr>
+							<td data-href="#" class="people">
+								<img class="picture" src="peoplephotos/KrystalHu.jpg" alt = "KrystalHu.jpg"><br>
+								<h3><center>Krystal Hu</center></h3></td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			</div>
+		  </div>
+		</div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+  <!-- Additional Custom Script -->
+  <script src="additionaljs.js"></script>
+</body>
+
+</html>
