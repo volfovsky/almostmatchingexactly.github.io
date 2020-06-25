@@ -331,13 +331,22 @@ tr[data-href] {
 .people:hover {
 	color: black;
 	text-decoration:none;
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: #ececec;
 }
 
 .people-cap {
 	font-size:14pt;
 	position:relative;
 	top:-25px;
+}
+
+@media (max-width: 876px) {
+	.people-cap {
+		font-size:1rem;
+	}
+	.people-name {
+		font-size:1.4rem;
+	}
 }
 
 .expand {
