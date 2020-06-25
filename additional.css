@@ -249,7 +249,6 @@ pre .cl {
 }
 
 .banner {
-	height: 100%;
 	width: calc(100% + 30px);
 	background-color: #EBF4FF;
 	border-bottom: 1px solid #dee2e6;
