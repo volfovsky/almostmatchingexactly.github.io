@@ -351,10 +351,10 @@ tr[data-href] {
 
 @media (max-width: 481px) {
 	.people-cap {
-		font-size:0.8rem;
+		font-size:0.7rem;
 	}
 	.people-name {
-		font-size:1.1rem;
+		font-size:1rem;
 	}
 }
 
