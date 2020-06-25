@@ -649,6 +649,7 @@ tr[data-href] {
 .logo-alt2 {
     height: 1.5em;
 	margin-left: -2px;
+	margin-bottom:15px;
 }
 
 .navbar {
@@ -656,8 +657,7 @@ tr[data-href] {
 }
 
 .sidebar-heading-logo {
-	margin-bottom:-4px;
-	z-index: 3;
+	height:56px;
 }
 
 .sidebar-heading-logo:hover{
