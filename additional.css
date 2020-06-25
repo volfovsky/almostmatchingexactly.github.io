@@ -315,17 +315,23 @@ tr[data-href] {
 	text-align: center;
 	height: auto;
 	width: 100%;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:15px;
 	border: 2px solid #6c757d;
 	margin-bottom: 10px;
 }
 
 .people {
-	width: 33.33%;
 	cursor: pointer;
+	color: black;
+	text-decoration:none;
+	text-align:center;
 }
 
 .people:hover {
-	color: #212529;
+	color: black;
+	text-decoration:none;
     background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -439,6 +445,15 @@ tr[data-href] {
 	color: #1111d4;
 }
 
+.tab-container {
+	white-space:nowrap;
+	overflow-x:hidden;
+}
+
+.tab-container:hover {
+	overflow-x:auto;
+}
+
 .languageHeader {
 	margin-top:23px;
 	height: 48px;
@@ -447,6 +462,7 @@ tr[data-href] {
 	padding-right:15px;
 	margin-left:-30px;
 	margin-right:-30px;
+	white-space:nowrap;
 }
 
 .languageTab {
@@ -462,7 +478,7 @@ tr[data-href] {
 	background-color:#f8f9fa;
 	z-index:0;
 	position:relative;
-	opacity:0.85
+	opacity:0.85;
 }
 
 .languageTab:hover {

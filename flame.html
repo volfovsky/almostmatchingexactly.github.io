@@ -56,9 +56,9 @@
 
       <div class="container-fluid" style="padding-bottom: 50px">
         <div style="margin-bottom:0px !important" class="banner"><h1 class="title mt-4">Getting Started with FLAME</h1></div>
-			<div class="container">
+			<div class="container"><div class="tab-container">
 		  	<h2 style="padding-bottom:0px !important" class="languageHeader"><a id="rTab" class="languageTab languageActive" onclick="switchDisp('flameR','flamePython');switchTabs('rTab','pTab')">R Package</a>
-		    <a id="pTab" class="languageTab" onclick="switchDisp('flamePython','flameR');switchTabs('pTab','rTab')">Python Package</a></h2><hr class="languageHr">
+		    <a id="pTab" class="languageTab" onclick="switchDisp('flamePython','flameR');switchTabs('pTab','rTab')">Python Package</a></h2></div><hr class="languageHr">
 			  <div id="flameR" class="container">
 				<div class="container">
 					Please note that this package requires the installation of R version 3.3 or higher. 
@@ -89,6 +89,7 @@
 					the algorithm will still match the data, but will not be able to estimate any treatment effects.
 					Though are no requirements for covariate column names, the columns should be ordered as shown below. 
 					Below is a sample dataset in the required format:
+					<div class="inputDataContainer"> 
 					  <div class="row">
 						<div class="col">
 						  <table class="table table-striped" style="margin-bottom:15px;margin-top:15px;width:95%;margin-left:auto;margin-right:auto">
@@ -119,7 +120,7 @@
 								<td>0</td>
 								<td>5</td>
 							  </tr style="text-align:center">
-							  <tr>
+							  <tr style="text-align:center">
 								<td>...</td>
 								<td>...</td>
 								<td>...</td>
@@ -138,7 +139,8 @@
 							</tbody>
 						  </table>
 						</div>
-					  </div>					
+					  </div>
+				    </div>
 				  </div>
 				  <h3>Usage</h3>
 				  <div class="container">
