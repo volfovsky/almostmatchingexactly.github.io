@@ -646,21 +646,13 @@ tr[data-href] {
 	margin-bottom:8px;
 }
 
-.logo {
-	height: 1.6em;
-	margin-left: -2px;
-	fill: red;
-}
-
-.logo-alt {
-    height: 2.2em;
-	margin-left: -2px;
-	fill: red;
-}
-
 .logo-alt2 {
-    height: 1.85em;
+    height: 1.5em;
 	margin-left: -2px;
+}
+
+.navbar {
+	height:57px;
 }
 
 .sidebar-heading-logo {
