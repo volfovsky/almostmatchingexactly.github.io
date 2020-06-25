@@ -349,6 +349,15 @@ tr[data-href] {
 	}
 }
 
+@media (max-width: 481px) {
+	.people-cap {
+		font-size:0.8rem;
+	}
+	.people-name {
+		font-size:1.1rem;
+	}
+}
+
 .expand {
 	border:none;
 	background-color: transparent;
