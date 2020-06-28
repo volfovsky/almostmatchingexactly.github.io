@@ -714,10 +714,10 @@ tr[data-href] {
 		display:none;
 	}
 	.smallText{
-		display:inline;
+		display:inline !important;
 	}
 	.languageActive .bigText {
-		display:inline !important;
+		display:inline;
 	}
 	.languageActive .smallText{
 		display:none !important;
