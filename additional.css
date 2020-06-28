@@ -352,6 +352,8 @@ tr[data-href] {
 @media (max-width: 481px) {
 	.people-cap {
 		font-size:0.7rem;
+		line-height:150%;
+		display:inline-block;
 	}
 	.people-name {
 		font-size:1rem;
