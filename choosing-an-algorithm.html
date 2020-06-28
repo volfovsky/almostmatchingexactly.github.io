@@ -61,49 +61,16 @@
 			<p>The Almost Matching Exactly Lab has produced four main algorithms for interpretable matching. 
 			Each algorithm has its own unique applications. 
 			Use the information below to decide which algorithm is right for you!</p>
-			  <!-- <div class="row"> -->
-				<!-- <div class="col"> -->
-				  <!-- <table class="table table-bordered" style="margin-bottom:15px;"> -->
-					<!-- <thead> -->
-					  <!-- <tr> -->
-						<!-- <th class="w-50">DAME <span style="font-weight: normal">(Dynamic Almost Matching Exactly):</span></th> -->
-						<!-- <th class="w-50">FLAME <span style="font-weight: normal">(Fast Large-Scale Matching Exactly):</th> -->
-					  <!-- </tr> -->
-					<!-- </thead> -->
-					<!-- <tbody> -->
-					  <!-- <tr> -->
-						<!-- <td>Requires categorical covariates and works best on small or moderately-sized datasets. Covariates are matched on a learned, weighted Hamming distance.</td> -->
-						<!-- <td>Requires categorical covariates and scales well to large datasets which do not fit on memory. Covariates are matched on a learned, weighted Hamming distance.</td> -->
-					  <!-- </tr> -->
-					<!-- </tbody> -->
-					<!-- <thead> -->
-					  <!-- <tr> -->
-						<!-- <th class="w-50">MALTS <span style="font-weight: normal">(Matching After Learning to Stretch):</th> -->
-						<!-- <th class="w-50">AHB <span style="font-weight: normal">(Adaptive Hyper-box Matching):</th> -->
-					  <!-- </tr> -->
-					<!-- </thead> -->
-					<!-- <tbody> -->
-					  <!-- <tr> -->
-						<!-- <td>Works with mixed continuous and categorical covariates using exact matching for discrete variables and generalized Mahalanobis distances for continuous variables.</td> -->
-						<!-- <td>Works with mixed continuous and categorical covariates by matching through adaptively choosing box edges.</td> -->
-					  <!-- </tr> -->
-					<!-- </tbody> -->
-				  <!-- </table> -->
-				<!-- </div> -->
-			  <!-- </div -->
-			  
-			  
-			  <!-- <a onclick="expandAll(['dame','flame','malts','ahb']);minusAll(['plusDame','plusFlame','plusMalts','plusAhb'])" class="choosingExpand">Expand all</a> -->
-			  <!-- <a onclick="collapseAll(['dame','flame','malts','ahb']);plusAll(['plusDame','plusFlame','plusMalts','plusAhb'])" class="choosingExpand" style="margin-left:30px">Collapse all</a> -->
-			  <!-- <div class="row" style="margin-top:10px"> -->
 				<div class="col">
-				  <table class="table choosing" style="margin-bottom:15px">
-					<thead style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6">
+				<div class="row row-choosing">
+				  <table class="table table-borderless choosing" style="margin-bottom:0px">
+					<thead style="border:1px solid #dee2e6;">
 					  <tr onclick="expand('dame');minus('plusDame')">
-						<th colspan="2">DAME <span style="font-weight: normal">(Dynamic Almost Matching Exactly):</span>
-						<a class="choosingPlus"><i id="plusDame" class="fa fa-minus-square-o" style="font-size:20pt"></i></a></th>
+						<th>DAME <span style="font-weight: normal">(Dynamic Almost Matching Exactly):</span></th>
+						<th style="vertical-align:middle"><a class="choosingPlus"><i id="plusDame" class="fa fa-minus-square-o" style="font-size:1.6rem"></i></a></th>
 					  </tr>
 					</thead>
+				  </table><table class="table choosing" style="margin-top:0px;margin-bottom:15px">
 					<tbody id="dame" style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6;border-bottom: 1px solid #dee2e6">
 					  <tr>
 						<td class="choosingwidth choosingLeft">Languages:</td>
@@ -123,13 +90,14 @@
 					  </tr>
 					</tbody>
 				  </table>
-				  <table class="table choosing">
-					<thead style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6">
+				  <table class="table table-borderless choosing" style="margin-bottom:0px">
+					<thead style="border:1px solid #dee2e6;">
 					  <tr onclick="expand('flame');minus('plusFlame')">
-						<th colspan="2">FLAME <span style="font-weight: normal">(Fast Large-Scale Matching Exactly):
-						<a class="choosingPlus"><i id="plusFlame" class="fa fa-minus-square-o" style="font-size:20pt"></i></a></th>
+						<th>FLAME <span style="font-weight: normal">(Fast Large-Scale Almost Matching Exactly):</span></th>
+						<th style="vertical-align:middle"><a class="choosingPlus"><i id="plusFlame" class="fa fa-minus-square-o" style="font-size:1.6rem"></i></a></th>
 					  </tr>
 					</thead>
+				  </table><table class="table choosing" style="margin-top:0px;margin-bottom:15px">
 					<tbody id="flame" style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6;border-bottom: 1px solid #dee2e6">
 					  <tr>
 						<td class="choosingwidth choosingLeft">Languages:</td>
@@ -159,13 +127,14 @@
 					  </tr>
 					</tbody>
 				  </table>
-				  <table class="table choosing">
-					<thead style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6">
+				  <table class="table table-borderless choosing" style="margin-bottom:0px">
+					<thead style="border:1px solid #dee2e6;">
 					  <tr onclick="expand('malts');minus('plusMalts')">
-						<th colspan="2">MALTS <span style="font-weight: normal">(Matching After Learning to Stretch):
-						<a class="choosingPlus"><i id="plusMalts" class="fa fa-minus-square-o" style="font-size:20pt"></i></a></th>
+						<th>MALTS <span style="font-weight: normal">(Matching After Learning to Stretch):</span></th>
+						<th style="vertical-align:middle"><a class="choosingPlus"><i id="plusMalts" class="fa fa-minus-square-o" style="font-size:1.6rem"></i></a></th>
 					  </tr>
 					</thead>
+				  </table><table class="table choosing" style="margin-top:0px;margin-bottom:15px">
 					<tbody id="malts" style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6;border-bottom: 1px solid #dee2e6">
 					  <tr>
 						<td class="choosingwidth choosingLeft">Languages:</td>
@@ -188,15 +157,14 @@
 					  </tr>
 					</tbody>
 				  </table>
-				  <table class="table choosing">
-					<thead style="border-left:1px solid #dee2e6;border-right:1px solid #dee2e6">
+				  <table class="table table-borderless choosing" style="margin-bottom:0px">
+					<thead style="border:1px solid #dee2e6;">
 					  <tr onclick="expand('ahb');minus('plusAhb')">
-						
-						
-						<th colspan="2">AHB <span style="font-weight: normal">(Adaptive Hyper-box Matching):
-						<a class="choosingPlus"><i id="plusAhb" class="fa fa-minus-square-o" style="font-size:20pt"></i></a></th>
+						<th>AHB <span style="font-weight: normal">(Adaptive Hyper-box Matching):</span></th>
+						<th style="vertical-align:middle"><a class="choosingPlus"><i id="plusAhb" class="fa fa-minus-square-o" style="font-size:1.6rem"></i></a></th>
 					  </tr>
 					</thead>
+				  </table><table class="table choosing" style="margin-top:0px;margin-bottom:15px">
 					<tbody id="ahb" style="width:100%;border-left:1px solid #dee2e6;border-right:1px solid #dee2e6;border-bottom: 1px solid #dee2e6">
 					  <tr>
 						<td class="choosingwidth choosingLeft">Languages:</td>
@@ -218,6 +186,7 @@
 					  </tr>
 					</tbody>
 				  </table>
+				</div>
 				</div>
 				<h2 class="underline">Additional Algorithms</h2>
 				<div class="container">

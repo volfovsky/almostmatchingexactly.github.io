@@ -398,12 +398,21 @@ tr[data-href] {
 	border-left: 1px solid #dee2e6;
 }
 
+@media (min-width: 767.98px) {
+	.row-choosing {
+		margin-left:0px;
+		margin-right:0px;
+		width:100%;
+		display:inline-block;
+	}
+}
+
 .choosing th {
 	background-color: #f8f9fa;
 	font-size: 1.3rem;
 }
 
-.choosing th:hover {
+.choosing thead:hover th{
 	background-color: rgba(0, 0, 0, 0.075);
 	cursor:pointer;
 }
@@ -425,15 +434,20 @@ tr[data-href] {
 	margin-right:30px;
 	font-size:0px;
 	margin-top:4px;
+	/* opacity:0; */
 	display:none;
 }
 
-.choosing th:hover .choosingPlus {
-	display:inline-block !important;
+.choosing thead:hover .choosingPlus {
+	/* opacity:1; */
+	display:inline-block;
+	padding:0px;
 }
 
 .choosingPlus:hover {
+	/* opacity:1; */
 	display:inline-block;
+	padding:0px;
 }
 
 .choosingPlus .fa-plus-square-o {
