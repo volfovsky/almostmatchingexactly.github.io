@@ -700,3 +700,26 @@ tr[data-href] {
     /* height: calc(1.85em + 1px); */
 	/* margin-bottom: -1px; */
 /* } */
+
+.bigText {
+	display:inline;
+}
+
+.smallText {
+	display:none;
+}
+
+@media (max-width: 500px) {
+	.bigText {
+		display:none;
+	}
+	.smallText{
+		display:inline;
+	}
+	.languageActive .bigText {
+		display:inline !important;
+	}
+	.languageActive .smallText{
+		display:none !important;
+	}
+}
