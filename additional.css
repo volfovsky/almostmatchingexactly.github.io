@@ -731,3 +731,9 @@ tr[data-href] {
     /* height: calc(1.85em + 1px); */
 	/* margin-bottom: -1px; */
 /* } */
+
+.input-data-container {
+	width:100%;
+	overflow-x:auto;
+	display:inline-block;
+}
