@@ -416,6 +416,10 @@ tr[data-href] {
 	.parameter-container {
 		margin-left: 0px;
 	}
+	.expand-all {
+		margin-left:0px;
+		margin-right:15px;
+	}
 }
 
 @media (min-width: 767.98px) {
