@@ -219,13 +219,13 @@ Beta = <span class="Rnumber">2</span>, m = <span class="Rnumber">1</span>, M = <
 											<td><b>holdout:</b><br>numeric, file, Dataframe, optional (default = 0.1)</td>
 											<td>Holdout data used to train the outcome model. If a numeric scalar, that proportion of <b>data</b> will be made into a holdout set and only the remaining proportion of <b>data</b> will be matched. Otherwise, if a file path or dataframe is provided, that dataset will serve as the holdout data.</td>
 										</tr><tr>
-											<td><b>treated_column_name:</b><br>string, optional (default = 'treated')</b></td>
+											<td><b>treated_<wbr>column_<wbr>name:</b><br>string, optional (default = 'treated')</b></td>
 											<td>The name of the column which specifies whether a unit is treated or control.</td>
 										</tr><tr>
-											<td><b>outcome_column_name:</b><br>string, optional (default = 'outcome')</td>
+											<td><b>outcome_<wbr>column_<wbr>name:</b><br>string, optional (default = 'outcome')</td>
 											<td>The name of the column which specifies each unit outcome.</td>
 										</tr><tr>
-											<td><b>black_box</b><br>string, optional (default = 'BART)</td>
+											<td><b>black_<wbr>box</b><br>string, optional (default = 'BART)</td>
 											<td>Denotes the method to be used to generate outcome model Y. If "BART" and cv = F, uses dbarts::bart with keeptrees = TRUE, keepevery = 10, verbose = FALSE, k = 2 and ntree =200 and then the default predict method to estimate the outcome. If "BART" and cv = T, k and ntree will be best values from cross validation. Defaults to 'BART'. There will be multiple choices about black_box in the future.</td>
 								        </tr><tr>
 											<td><b>cv</b><br>logical, optional (default = T)</td>
@@ -252,10 +252,10 @@ Beta = <span class="Rnumber">2</span>, m = <span class="Rnumber">1</span>, M = <
 									<td><b>holdout:</b><br>numeric, file, Dataframe, optional (default = 0.1)</td>
 									<td>Holdout data used to train the outcome model. If a numeric scalar, that proportion of <b>data</b> will be made into a holdout set and only the remaining proportion of <b>data</b> will be matched. Otherwise, if a file path or dataframe is provided, that dataset will serve as the holdout data.</td>
 								</tr><tr>
-									<td><b>treated_column_name:</b><br>string, optional (default = 'treated')</b></td>
+									<td><b>treated_<wbr>column_<wbr>name:</b><br>string, optional (default = 'treated')</b></td>
 									<td>The name of the column which specifies whether a unit is treated or control.</td>
 								</tr><tr>
-									<td><b>outcome_column_name:</b><br>string, optional (default = 'outcome')</td>
+									<td><b>outcome_<wbr>column_<wbr>name:</b><br>string, optional (default = 'outcome')</td>
 									<td>The name of the column which specifies each unit outcome.</td>
 								</tr><tr>
 									<td><b>black_box</b><br>string, optional (default = 'BART)</td>

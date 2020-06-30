@@ -181,143 +181,143 @@ print(te)</span>
 					<a onclick="expandAll(['dameKey','dameEarly','dameMissing','dameAdditional']);minusAll(['plusKey','plusEarly','plusMissing','plusAdditional'])" class="expand-all">Expand all</a>
 					<a onclick="collapseAll(['dameKey','dameEarly','dameMissing','dameAdditional']);plusAll(['plusKey','plusEarly','plusMissing','plusAdditional'])" 
 					class="expand-all">Collapse all</a>
-					
-					
 					<div class="parameter-container">
-					<h4 style="margin-top: 15px">Key Parameters<i id="plusKey" onclick="expand('dameKey');minus(this.id)" class="fa fa-minus-square-o"></i></h4>
-					<div id="dameKey">
-					<span style="color:#6c757d">* denotes DAME-specific parameters</span>
-					<div class="row">
-						<div class="col">
-						  <table class="table table-striped" style="margin-top:15px;margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
-							<tbody>
-							  <tr>
-								<td class="pwidth"><b>input_data:</b><br>file, Dataframe, required</td>
-								<td>The data to be matched.</td>
-							  </tr><tr>
-							    <td><b>treatment_column_name:</b><br>string, optional (default = 'treated')</td>
-								<td>The name of the column which specifies whether a unit is treated or control.</td>
-							  </tr><tr>
-							    <td><b>*weight_array:</b><br>array, optional (default = False)</td>
-								<td>Array of weights for all covariates in input_data. Only needed if adaptive_weights = False.</td>
-							  </tr><tr>
-							    <td><b>outcome_column_name:</b><br>string, optional (default = 'outcome')</td>
-								<td>The name of the column which specifies each unit outcome.</td>
-							  </tr><tr>
-							    <td><b>adaptive_weights:</b><br>string, optional (default = 'ridge')</b></td>
-								<td>The weight dropping method to be used.<br>If False, implements no weight dropping method.
-								<br>If 'ridge', implement ridge regression.<br>If 'ridgeCV', implement ridge regression with cross-validation.
-								<br>If 'decision tree', implement decision tree regression.</td>
-							  </tr><tr>
-								<td><b>alpha:</b><br>float, optional (default = 0.1)</td>
-								<td>This is the alpha for ridge regression. We use the scikit package for ridge regression, so it is "regularization 
-								strength". Larger values specify stronger regularization. Must be positive float.</td>
-							  </tr><tr>
-								<td><b>holdout_data:</b><br>file, Dataframe, optional (default = False)</td>
-								<td>The data used in the holdout training set. Only required if doing an adaptive_weights version.
-								If False, 10% of the input data will be randomly selected for the training set.</td>
-						      </tr><tr>
-								<td><b>repeats:</b><br>bool, optional (default = True)</td>
-								<td>Specifies whether values for which a main matched group has been found can
-									be used again and placed in an auxiliary matched group.</td>
-							  </tr><tr>
-								<td><b>verbose:</b><br>integer, optional (default = 2): </td>
-								<td>Controls how progress is displayed while the algorithm is running.<br>
-									If 0, prints nothing.<br>If 1, prints iteration number. <br>If 2, prints the
-									iteration number and number of units left to match on every 10th 
-									iteration.<br>If 3, prints iteration number and number of units left to match on every iteration.</td>
-							  </tr><tr>
-								<td><b>want_pe:</b><br>bool, optional (default = False) </td>
-								<td>Specifies whether the output will include the 
-									predictive error of the covariate sets matched on in each iteration.</td>
-							  </tr><tr>
-								<td><b>want_bf:</b><br>bool, optional (default = False) </td>
-								<td>Specifies whether the output will include the balancing factor of each 
-									iteration.</td>
-							  </tr>
-							</tbody>
-						  </table>
+						<h4 style="margin-top: 15px">Key Parameters<i id="plusKey" onclick="expand('dameKey');minus(this.id)" class="fa fa-minus-square-o"></i></h4>
+						<div id="dameKey">
+						<span style="color:#6c757d">* denotes DAME-specific parameters</span>
+						<div class="row">
+							<div class="col">
+							<table class="table table-striped" style="margin-top:15px;margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
+								<tbody>
+								<tr>
+									<td class="pwidth"><b>input_data:</b><br>file, Dataframe, required</td>
+									<td>The data to be matched.</td>
+								</tr><tr>
+									<td><b>treatment_<wbr>column_<wbr>name:</b><br>string, optional (default = 'treated')</td>
+									<td>The name of the column which specifies whether a unit is treated or control.</td>
+								</tr><tr>
+									<td><b>*weight_array:</b><br>array, optional (default = False)</td>
+									<td>Array of weights for all covariates in input_data. Only needed if adaptive_weights = False.</td>
+								</tr><tr>
+									<td><b>outcome_<wbr>column_<wbr>name:</b><br>string, optional (default = 'outcome')</td>
+									<td>The name of the column which specifies each unit outcome.</td>
+								</tr><tr>
+									<td><b>adaptive_<wbr>weights:</b><br>string, optional (default = 'ridge')</b></td>
+									<td>The weight dropping method to be used.<br>If False, implements no weight dropping method.
+									<br>If 'ridge', implement ridge regression.<br>If 'ridgeCV', implement ridge regression with cross-validation.
+									<br>If 'decision tree', implement decision tree regression.</td>
+								</tr><tr>
+									<td><b>alpha:</b><br>float, optional (default = 0.1)</td>
+									<td>This is the alpha for ridge regression. We use the scikit package for ridge regression, so it is "regularization 
+									strength". Larger values specify stronger regularization. Must be positive float.</td>
+								</tr><tr>
+									<td><b>holdout_data:</b><br>file, Dataframe, optional (default = False)</td>
+									<td>The data used in the holdout training set. Only required if doing an adaptive_weights version.
+									If False, 10% of the input data will be randomly selected for the training set.</td>
+								</tr><tr>
+									<td><b>repeats:</b><br>bool, optional (default = True)</td>
+									<td>Specifies whether values for which a main matched group has been found can
+										be used again and placed in an auxiliary matched group.</td>
+								</tr><tr>
+									<td><b>verbose:</b><br>integer, optional (default = 2): </td>
+									<td>Controls how progress is displayed while the algorithm is running.<br>
+										If 0, prints nothing.<br>If 1, prints iteration number. <br>If 2, prints the
+										iteration number and number of units left to match on every 10th 
+										iteration.<br>If 3, prints iteration number and number of units left to match on every iteration.</td>
+								</tr><tr>
+									<td><b>want_pe:</b><br>bool, optional (default = False) </td>
+									<td>Specifies whether the output will include the 
+										predictive error of the covariate sets matched on in each iteration.</td>
+								</tr><tr>
+									<td><b>want_bf:</b><br>bool, optional (default = False) </td>
+									<td>Specifies whether the output will include the balancing factor of each 
+										iteration.</td>
+								</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						</div>
+						<h4 style="margin-top:15px">Early Stopping Parameters<i id="plusEarly" onclick="expand('dameEarly');minus(this.id)" class="fa fa-minus-square-o"></i></h4>
+						<div id="dameEarly">
+						<div class="row">
+							<div class="col">
+							<table class="table table-striped" style="margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
+								<tbody>
+								<tr>
+									<td class="pwidth"><b>early_<wbr>stop_<wbr>iterations:</b><br>integer, optional (default = False): </td>
+									<td>If provided, specifies the number of iterations after which to hard-stop the algorithm.</td>
+								</tr><tr>
+									<td><b>stop_<wbr>unmatched_c:</b><br>bools, optional (default = False)</td>
+									<td>Specifies whether the algorithm stops when there are no control units remaining to match.</td>
+								</tr><tr>
+									<td><b>stop_<wbr>unmatched_t:</b><br>bools, optional (default = False)</td>
+									<td>Specifies whether the algorithm stops when there are no treatment units remaining to match.</td>
+								</tr><tr>
+									<td><b>early_<wbr>stop_<wbr>un_<wbr>c_frac:</b><br>float, optional (default = 0.1)</td>
+									<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
+								</tr><tr>
+									<td><b>early_<wbr>stop_<wbr>un_<wbr>t_frac:</b><br>float, optional (default = 0.1)</td>
+									<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
+								</tr><tr>
+									<td><b>early_stop_pe:</b><br>bool, optional (default = False)</td>
+									<td>If True, then the algorithm will hard-stop once the covariate set chosen for matching has a predictive error greater 
+									than the threshold provided in <b>early_stop_pe_frac</b></td>
+								</tr><tr>
+									<td><b>early_stop_bf:</b><br>bool, optional (default = False)</td>
+									<td>If True, then the algorithm will hard-stop once the covariate set chosen for matching has a balancing factor lower 
+									than the threshold provided in <b>early_stop_bf_frac</b></td>
+								</tr><tr>
+									<td><b>early_<wbr>stop_<wbr>pe_frac:</b><br>float, optional (default = 0.01)</td>
+									<td>If <b>early_stop_pe</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a predictive error greater than this value.</td>
+								</tr><tr>
+									<td><b>early_<wbr>stop_<wbr>bf_frac:</b><br>float, optional (default = 0.01)</td>
+									<td>If <b>early_stop_bf</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a balancing factor lower than this value.</td>
+								</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						</div>
+						<h4 style="margin-top:15px">Missing Data Parameters<i id="plusMissing" onclick="expand('dameMissing');minus(this.id)" class="fa fa-minus-square-o"></i></h4>
+						<div id="dameMissing">
+						<div class="row">
+							<div class="col">
+							<table class="table table-striped" style="margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
+								<tbody>
+								<tr>
+									<td class="pwidth"><b>missing_<wbr>indicator:</b><br>string, integer, np.nan, optional (default = np.nan) </td>
+									<td>This is the indicator for missing data in the dataset. 
+									For example, if missing values are denoted with "NA", set this paramater equal to "NA".  </td>
+								</tr><tr>
+									<td><b>missing_<wbr>holdout_<wbr>replace:</b><br>integer, optional (default = 0): </td>
+									<td>
+										If 0, assume no missingness in holdout data.<br>
+										If 1, drop all units with missingness from holdout dataset.<br>
+										If 2, impute missing values using <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/">MICE</a> 
+										on holdout dataset for the number of imputations specified by <b>missing_<wbr>holdout<wbr>_imputations</b></td>
+								</tr><tr>
+									<td><b>missing_<wbr>data_<wbr>replace:</b><br>integer, optional (default = 0): </td>
+									<td>
+										If 0, assume no missingness in matching data.<br>
+										If 1, drop all units with missingness from matching dataset.<br>
+										If 2, do not match units on covariates that are missing.<br>
+										If 3, impute missing values using <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/">MICE</a> 
+										on matching dataset for the number of imputations specified by <b>missing_<wbr>data_<wbr>imputations</b>.</td>
+								</tr><tr>
+									<td><b>missing_<wbr>holdout_<wbr>imputations:</b><br>integer, optional (default = 10) </td>
+									<td>If <b>missing_<wbr>holdout_<wbr>replace</b>=2, specifies the number of imputations on the holdout set.</td>
+								</tr><tr>
+									<td><b>missing_<wbr>data_<wbr>imputations:</b><br>integer, optional (default = 1) </td>
+									<td>If <b>missing_<wbr>data_<wbr>replace</b>=3, specifies the number of imputations on the matching set.</td>
+								</tr>
+								</tbody>
+							</table>
+							</div>
 						</div>
 						</div>
 					</div>
-					<h4 style="margin-top:15px">Early Stopping Parameters<i id="plusEarly" onclick="expand('dameEarly');minus(this.id)" class="fa fa-minus-square-o"></i></h4>
-					<div id="dameEarly">
-					<div class="row">
-						<div class="col">
-						  <table class="table table-striped" style="margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
-							<tbody>
-							  <tr>
-								<td class="pwidth"><b>early_stop_iterations:</b><br>integer, optional (default = False): </td>
-								<td>If provided, specifies the number of iterations after which to hard-stop the algorithm.</td>
-							  </tr><tr>
-								<td><b>stop_unmatched_c:</b><br>bools, optional (default = False)</td>
-								<td>Specifies whether the algorithm stops when there are no control units remaining to match.</td>
-							  </tr><tr>
-								<td><b>stop_unmatched_t:</b><br>bools, optional (default = False)</td>
-								<td>Specifies whether the algorithm stops when there are no treatment units remaining to match.</td>
-							  </tr><tr>
-								<td><b>early_stop_un_c_frac:</b><br>float, optional (default = 0.1)</td>
-								<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
-							  </tr><tr>
-								<td><b>early_stop_un_t_frac:</b><br>float, optional (default = 0.1)</td>
-								<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
-							  </tr><tr>
-								<td><b>early_stop_pe:</b><br>bool, optional (default = False)</td>
-								<td>If True, then the algorithm will hard-stop once the covariate set chosen for matching has a predictive error greater 
-								than the threshold provided in <b>early_stop_pe_frac</b></td>
-							  </tr><tr>
-								<td><b>early_stop_bf:</b><br>bool, optional (default = False)</td>
-								<td>If True, then the algorithm will hard-stop once the covariate set chosen for matching has a balancing factor lower 
-								than the threshold provided in <b>early_stop_bf_frac</b></td>
-							  </tr><tr>
-								<td><b>early_stop_pe_frac:</b><br>float, optional (default = 0.01)</td>
-								<td>If <b>early_stop_pe</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a predictive error greater than this value.</td>
-							  </tr><tr>
-								<td><b>early_stop_bf_frac:</b><br>float, optional (default = 0.01)</td>
-								<td>If <b>early_stop_bf</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a balancing factor lower than this value.</td>
-							  </tr>
-							</tbody>
-						  </table>
-						</div>
-					</div>
-					</div>
-					<h4 style="margin-top:15px">Missing Data Parameters<i id="plusMissing" onclick="expand('dameMissing');minus(this.id)" class="fa fa-minus-square-o"></i></h4>
-					<div id="dameMissing"></h4>
-					<div class="row">
-						<div class="col">
-						  <table class="table table-striped" style="margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
-							<tbody>
-							  <tr>
-								<td class="pwidth"><b>missing_indicator:</b><br>string, integer, np.nan, optional (default = np.nan) </td>
-								<td>This is the indicator for missing data in the dataset. 
-								For example, if missing values are denoted with "NA", set this paramater equal to "NA".  </td>
-							  </tr><tr>
-								<td><b>missing_holdout_replace:</b><br>integer, optional (default = 0): </td>
-								<td>
-									If 0, assume no missingness in holdout data.<br>
-									If 1, drop all units with missingness from holdout dataset.<br>
-									If 2, impute missing values using <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/">MICE</a> on holdout dataset for the number of imputations specified by <b>missing_holdout_imputations</b></td>
-							  </tr><tr>
-								<td><b>missing_data_replace:</b><br>integer, optional (default = 0): </td>
-								<td>
-									If 0, assume no missingness in matching data.<br>
-									If 1, drop all units with missingness from matching dataset.<br>
-									If 2, do not match units on covariates that are missing.<br>
-									If 3, impute missing values using <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/">MICE</a> on matching dataset for the number of imputations specified by <b>missing_data_imputations</b>.</td>
-							  </tr><tr>
-								<td><b>missing_holdout_imputations:</b><br>integer, optional (default = 10) </td>
-								<td>If <b>missing_holdout_replace</b>=2, specifies the number of imputations on the holdout set.</td>
-							  </tr><tr>
-								<td><b>missing_data_imputations:</b><br>integer, optional (default = 1) </td>
-								<td>If <b>missing_data_replace</b>=3, specifies the number of imputations on the matching set.</td>
-							  </tr>
-							</tbody>
-						  </table>
-						</div>
-					</div>
-					</div>
-					</div>
-			  </div>
+			      </div>
 			  <h3 style="margin-top:25px">Additional Functions - Parameters and Defaults</h3>
 				  <div class="container">
 <div class="pre-nonumbers" style="margin-top:15px"><span class="comment">#returns main matched group of specified unit</span>
@@ -346,10 +346,10 @@ outcome_column_name, return_vals=<span class="number">1</span>)</div>
 								<td class="pwidth"><b>input_data:</b><br>Dataframe, required</td>
 								<td>Dataframe containing the original dataset which has already been matched using DAME.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>treatment_column_name:</b><br>string, required</td>
+								<td class="pwidth"><b>treatment_<wbr>column_<wbr>name:</b><br>string, required</td>
 								<td>The name of the column in <b>input_data</b> which specifies whether a unit is treated or control.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>outcome_column_name:</b><br>string, required</td>
+								<td class="pwidth"><b>outcome_<wbr>column_<wbr>name:</b><br>string, required</td>
 								<td>The name of the column in <b>input_data</b> which specifies each unit outcome.</td>
 							  </tr><tr>
 								<td class="pwidth"><b>output_style:</b><br>integer, optional (default = 1)</td>
