@@ -183,6 +183,20 @@ pre .cl {
 	border: none;
 }
 
+@media (max-width:900px) {
+	pre {
+		margin-left:0px;
+		margin-right:0px;
+	}
+	.pre-nonumbers {
+		margin-left:0px;
+		margin-right:0px;
+	}
+	.codeButton {
+		margin-right:0px
+	}
+}
+
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #toast {
   visibility: hidden; /* Hidden by default. Visible on click */
@@ -396,6 +410,12 @@ tr[data-href] {
 	margin-left: 15px;
 	padding-left: 15px;
 	border-left: 1px solid #dee2e6;
+}
+
+@media (max-width:900px) {
+	.parameter-container {
+		margin-left: 0px;
+	}
 }
 
 @media (min-width: 767.98px) {
