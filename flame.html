@@ -257,32 +257,32 @@ ATT(FLAME_out = FLAME_out)</span>
 								<td><b>outcome_<wbr>column_<wbr>name:</b><br>string, optional (default = 'outcome')</td>
 								<td>The name of the column which specifies each unit outcome.</td>
 							  </tr><tr>
-								<td><b>binning_method:</b><br>string, optional (default = 'sturges')</td>
+								<td><b>binning_<wbr>method:</b><br>string, optional (default = 'sturges')</td>
 								<td>The method used to determine number of bins for regrouping continuous covariates.<br>
 								If 'sturges', use Sturge's rule.<br>
 								If 'scott', use Scott's rule.<br>
 								If 'fd', use the Freedman-Diaconis rule.</td>
 						      </tr><tr>
-								<td><b>PE_method:</b><br>string, optional (default = 'ridge')</td>
+								<td><b>PE_<wbr>method:</b><br>string, optional (default = 'ridge')</td>
 								<td>The method used to cross-validate before the default predict method is used to estimate outcomes.<br>
 								If 'ridge', perform cross-validation using <a target="_blank" href="https://www.rdocumentation.org/packages/glmnet/versions/4.0/topics/cv.glmnet">glmnet::cv.glmnet</a> with default parameters.<br>
 								If 'xgb', perform cross-validation using <a target="_blank" href="https://www.rdocumentation.org/packages/xgboost/versions/1.0.0.2/topics/xgb.cv">xgboost::xgb.cv</a> with a wide range of parameter values
 								and determines best values with respect to root-mean-square error (RMSE) for continuous outcomes or binary missclassification rate for binary outcomes.</td>
 							  </tr><tr>
-								<td><b>user_PE_fit:</b><br>function, optional (default = NULL): </td>
+								<td><b>user_<wbr>PE_<wbr>fit:</b><br>function, optional (default = NULL): </td>
 								<td>Optional function to be used instead of those provided for in <b>PE_method</b> to fit unit outcomes from the covariates. 
 								Must take in a matrix of covariates as its first argument and a vector of outcomes as its second argument.</td>
 							  </tr><tr>
 								<td><b>user_<wbr>PE_<wbr>fit_<wbr>params:</b><br>list, optional (default = NULL) </td>
-								<td>A named list of optional parameters to be used by <b>user_PE_fit</b></td>
+								<td>A named list of optional parameters to be used by <b>user_<wbr>PE_<wbr>fit</b></td>
 							  </tr><tr>
-								<td><b>user_PE_predict:</b><br>function, optional (default = NULL) </td>
+								<td><b>user_<wbr>PE_<wbr>predict:</b><br>function, optional (default = NULL) </td>
 								<td>Optional function to be used instead of the default predict method for generating predictions from the
-								output of <b>user_PE_fit</b>. Must take in an object of the type returned by <b>user_PE_fit</b>
+								output of <b>user_<wbr>PE_<wbr>fit</b>. Must take in an object of the type returned by <b>user_<wbr>PE_<wbr>fit</b>
 								as its first argument and a matrix of values for which to generate predictions as its second argument.</td>
 							  </tr><tr>
 								<td><b>user_<wbr>PE_<wbr>predict_<wbr>params:</b><br>list, optional (default = NULL) </td>
-								<td>A named list of optional parameters to be used by <b>user_PE_predict</b></td>
+								<td>A named list of optional parameters to be used by <b>user_<wbr>PE_<wbr>predict</b></td>
 							  </tr><tr>
 								<td><b>replace:</b><br>logical scalar, optional (default = FALSE): </td>
 								<td>Specifies whether the same unit can be matched multiple times on different sets of covariates.
@@ -295,10 +295,10 @@ ATT(FLAME_out = FLAME_out)</span>
 								If 1, prints stopping condition.<br>
 								If 2, prints the iteration number, the number of units left to match on every 5th iteration, and the stopping condition.</td>
 							  </tr><tr>
-								<td><b>return_pe:</b><br>logical scalar, optional (default = FALSE): </td>
+								<td><b>return_<wbr>pe:</b><br>logical scalar, optional (default = FALSE): </td>
 								<td>If True, the predictive error at each iteration will be returned.</td>
 							  </tr><tr>
-								<td><b>return_bf:</b><br>logical scalar, optional (default = FALSE): </td>
+								<td><b>return_<wbr>bf:</b><br>logical scalar, optional (default = FALSE): </td>
 								<td>If True, the balancing factor at each iteration will be returned.</td>
 							  </tr>
 							</tbody>
@@ -326,11 +326,11 @@ ATT(FLAME_out = FLAME_out)</span>
 								<td><b>early_<wbr>stop_<wbr>treated:</b><br>numeric, optional (default = 0)</td>
 								<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
 							  </tr><tr>
-								<td><b>early_stop_pe:</b><br>numeric, optional (default = Inf)</td>
+								<td><b>early_<wbr>stop_<wbr>pe:</b><br>numeric, optional (default = Inf)</td>
 								<td>Maximum acceptable predictive error. 
 								If FLAME attempts to drop a covariate which would increase PE above this threshold, it will stop iterating.</td>
 							  </tr><tr>
-								<td><b>early_stop_bf:</b><br>numeric, optional (default = 0)</td>
+								<td><b>early_<wbr>stop_<wbr>bf:</b><br>numeric, optional (default = 0)</td>
 								<td>Minimum acceptable balancing factor. 
 								If FLAME attempts to drop a covariate which would decrease BF below this threshold, it will stop iterating.</td>
 							  </tr>
@@ -360,16 +360,16 @@ ATT(FLAME_out = FLAME_out)</span>
 								on holdout dataset for the number of imputations specified by <b>missing_<wbr>holdout_<wbr>imputations</b>.</td>
 							  </tr><tr>
 								<td><b>missing_<wbr>data_<wbr>imputations:</b><br>integer, optional (default = 5) </td>
-								<td>If <b>missing_data</b>=2, specifies the number of imputations on the matching set.</td>
+								<td>If <b>missing_<wbr>data</b>=2, specifies the number of imputations on the matching set.</td>
 							  </tr><tr>
 								<td><b>missing_<wbr>holdout_<wbr>imputations:</b><br>integer, optional (default = 5) </td>
-								<td>If <b>missing_holdout</b>=2, specifies the number of imputations on the holdout set.</td>
+								<td>If <b>missing_<wbr>holdout</b>=2, specifies the number of imputations on the holdout set.</td>
 							  </tr><tr>
 								<td><b>impute_<wbr>with_<wbr>treatment:</b><br>logical scalar, optional (default = TRUE) </td>
-								<td>If True, treatment assignment is used to impute covariates when <b>missing_data</b>=2 or <b>missing_holdout</b>=2</td>
+								<td>If True, treatment assignment is used to impute covariates when <b>missing_data</b>=2 or <b>missing_<wbr>holdout</b>=2</td>
 							  </tr><tr>
 								<td><b>impute_<wbr>with_<wbr>outcome:</b><br>logical scalar, optional (default = FALSE) </td>
-								<td>If True, outcome information is used to impute covariates when <b>missing_data</b>=2 or <b>missing_holdout</b>=2</td>
+								<td>If True, outcome information is used to impute covariates when <b>missing_data</b>=2 or <b>missing_<wbr>holdout</b>=2</td>
 							  </tr>
 							</tbody>
 						  </table>
@@ -419,14 +419,14 @@ ATT(FLAME_out = FLAME_out)</span>
 								<td class="pwidth"><b>units:</b><br>numeric vector, required</td>
 								<td>Vector of indices for the units of interest for the functions MG and CATE.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>FLAME_out:</b><br>Dataframe, required</td>
+								<td class="pwidth"><b>FLAME_<wbr>out:</b><br>Dataframe, required</td>
 								<td>The output of a call to FLAME.</td>
 							  </tr><tr>
 								<td class="pwidth"><b>multiple:</b><br>logical scalar, optional (default = FALSE)</td>
 								<td>If False (default), then the functions MG and CATE will only return objects pertaining to a unit's main matched group.<br>
 								If True, the aforementioned functions will return objects pertaining to every matched group containing a specified unit (only relevant if <b>replace</b>=True). </td>
 							  </tr><tr>
-								<td class="pwidth"><b>index_only:</b><br>logical scalar, optional (default = FALSE)</td>
+								<td class="pwidth"><b>index_<wbr>only:</b><br>logical scalar, optional (default = FALSE)</td>
 								<td>If True, the function MG will return only the indices of the units in each matched group.</td>
 							  </tr>
 							</tbody>

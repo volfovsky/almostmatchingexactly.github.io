@@ -258,7 +258,7 @@ Beta = <span class="Rnumber">2</span>, m = <span class="Rnumber">1</span>, M = <
 									<td><b>outcome_<wbr>column_<wbr>name:</b><br>string, optional (default = 'outcome')</td>
 									<td>The name of the column which specifies each unit outcome.</td>
 								</tr><tr>
-									<td><b>black_box</b><br>string, optional (default = 'BART)</td>
+									<td><b>black_<wbr>box</b><br>string, optional (default = 'BART)</td>
 									<td>Denotes the method to be used to generate outcome model Y. If "BART" and cv = F, uses dbarts::bart with keeptrees = TRUE, keepevery = 10, verbose = FALSE, k = 2 and ntree =200 and then the default predict method to estimate the outcome. If "BART" and cv = T, k and ntree will be best values from cross validation. Defaults to 'BART'. There will be multiple choices about black_box in the future.</td>
 								</tr><tr>
 									<td><b>cv</b><br>logical, optional (default = T)</td>
@@ -279,7 +279,7 @@ Beta = <span class="Rnumber">2</span>, m = <span class="Rnumber">1</span>, M = <
 									<td><b>M</b><br>A positive integer scalar, optional (default = 1e+5)</td>
 									<td>Controls the weight placed on decision variable wij, which is an indicator for whether a unit is in the box.</td>
 								</tr><tr>
-									<td><b>n_prune</b><br>A positive inetger scalar, optional (default = 0.1* nrow(dataset to be matched))</td>
+									<td><b>n_<wbr>prune</b><br>A positive inetger scalar, optional (default = 0.1* nrow(dataset to be matched))</td>
 									<td>Determines the number of candidate units selected to run the mip on for constructing the box. Dataset mentioned below is refered to the dataset for matching. If you match a small dataset with the number of units smaller than 400, it will run MIP on all dataset for each treated unit. If you match larger dataset and your memory of your computer cannot support such much computation, plase adjust n_prune below 400 or even smaller. The smaller number of candidate units selected to run the mip on for constructing the box, the faster this program runs.</td>
 								</tr>
 							</tbody>

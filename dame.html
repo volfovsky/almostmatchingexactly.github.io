@@ -190,13 +190,13 @@ print(te)</span>
 							<table class="table table-striped" style="margin-top:15px;margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
 								<tbody>
 								<tr>
-									<td class="pwidth"><b>input_data:</b><br>file, Dataframe, required</td>
+									<td class="pwidth"><b>input_<wbr>data:</b><br>file, Dataframe, required</td>
 									<td>The data to be matched.</td>
 								</tr><tr>
 									<td><b>treatment_<wbr>column_<wbr>name:</b><br>string, optional (default = 'treated')</td>
 									<td>The name of the column which specifies whether a unit is treated or control.</td>
 								</tr><tr>
-									<td><b>*weight_array:</b><br>array, optional (default = False)</td>
+									<td><b>*weight_<wbr>array:</b><br>array, optional (default = False)</td>
 									<td>Array of weights for all covariates in input_data. Only needed if adaptive_weights = False.</td>
 								</tr><tr>
 									<td><b>outcome_<wbr>column_<wbr>name:</b><br>string, optional (default = 'outcome')</td>
@@ -211,7 +211,7 @@ print(te)</span>
 									<td>This is the alpha for ridge regression. We use the scikit package for ridge regression, so it is "regularization 
 									strength". Larger values specify stronger regularization. Must be positive float.</td>
 								</tr><tr>
-									<td><b>holdout_data:</b><br>file, Dataframe, optional (default = False)</td>
+									<td><b>holdout_<wbr>data:</b><br>file, Dataframe, optional (default = False)</td>
 									<td>The data used in the holdout training set. Only required if doing an adaptive_weights version.
 									If False, 10% of the input data will be randomly selected for the training set.</td>
 								</tr><tr>
@@ -225,11 +225,11 @@ print(te)</span>
 										iteration number and number of units left to match on every 10th 
 										iteration.<br>If 3, prints iteration number and number of units left to match on every iteration.</td>
 								</tr><tr>
-									<td><b>want_pe:</b><br>bool, optional (default = False) </td>
+									<td><b>want_<wbr>pe:</b><br>bool, optional (default = False) </td>
 									<td>Specifies whether the output will include the 
 										predictive error of the covariate sets matched on in each iteration.</td>
 								</tr><tr>
-									<td><b>want_bf:</b><br>bool, optional (default = False) </td>
+									<td><b>want_<wbr>bf:</b><br>bool, optional (default = False) </td>
 									<td>Specifies whether the output will include the balancing factor of each 
 										iteration.</td>
 								</tr>
@@ -248,31 +248,31 @@ print(te)</span>
 									<td class="pwidth"><b>early_<wbr>stop_<wbr>iterations:</b><br>integer, optional (default = False): </td>
 									<td>If provided, specifies the number of iterations after which to hard-stop the algorithm.</td>
 								</tr><tr>
-									<td><b>stop_<wbr>unmatched_c:</b><br>bools, optional (default = False)</td>
+									<td><b>stop_<wbr>unmatched_<wbr>c:</b><br>bools, optional (default = False)</td>
 									<td>Specifies whether the algorithm stops when there are no control units remaining to match.</td>
 								</tr><tr>
-									<td><b>stop_<wbr>unmatched_t:</b><br>bools, optional (default = False)</td>
+									<td><b>stop_<wbr>unmatched_<wbr>t:</b><br>bools, optional (default = False)</td>
 									<td>Specifies whether the algorithm stops when there are no treatment units remaining to match.</td>
 								</tr><tr>
-									<td><b>early_<wbr>stop_<wbr>un_<wbr>c_frac:</b><br>float, optional (default = 0.1)</td>
+									<td><b>early_<wbr>stop_<wbr>un_<wbr>c_<wbr>frac:</b><br>float, optional (default = 0.1)</td>
 									<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
 								</tr><tr>
-									<td><b>early_<wbr>stop_<wbr>un_<wbr>t_frac:</b><br>float, optional (default = 0.1)</td>
+									<td><b>early_<wbr>stop_<wbr>un_<wbr>t_<wbr>frac:</b><br>float, optional (default = 0.1)</td>
 									<td>Minimum acceptable proportion of unmatched treatment units after which the algorithm will stop iterating. Must be between 0 and 1.</td>
 								</tr><tr>
-									<td><b>early_stop_pe:</b><br>bool, optional (default = False)</td>
+									<td><b>early_<wbr>stop_<wbr>pe:</b><br>bool, optional (default = False)</td>
 									<td>If True, then the algorithm will hard-stop once the covariate set chosen for matching has a predictive error greater 
-									than the threshold provided in <b>early_stop_pe_frac</b></td>
+									than the threshold provided in <b>early_<wbr>stop_<wbr>pe_<wbr>frac</b></td>
 								</tr><tr>
-									<td><b>early_stop_bf:</b><br>bool, optional (default = False)</td>
+									<td><b>early_<wbr>stop_<wbr>bf:</b><br>bool, optional (default = False)</td>
 									<td>If True, then the algorithm will hard-stop once the covariate set chosen for matching has a balancing factor lower 
-									than the threshold provided in <b>early_stop_bf_frac</b></td>
+									than the threshold provided in <b>early_<wbr>stop_<wbr>bf_<wbr>frac</b></td>
 								</tr><tr>
-									<td><b>early_<wbr>stop_<wbr>pe_frac:</b><br>float, optional (default = 0.01)</td>
-									<td>If <b>early_stop_pe</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a predictive error greater than this value.</td>
+									<td><b>early_<wbr>stop_<wbr>pe_<wbr>frac:</b><br>float, optional (default = 0.01)</td>
+									<td>If <b>early_<wbr>stop_<wbr>pe</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a predictive error greater than this value.</td>
 								</tr><tr>
-									<td><b>early_<wbr>stop_<wbr>bf_frac:</b><br>float, optional (default = 0.01)</td>
-									<td>If <b>early_stop_bf</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a balancing factor lower than this value.</td>
+									<td><b>early_<wbr>stop_<wbr>bf_<wbr>frac:</b><br>float, optional (default = 0.01)</td>
+									<td>If <b>early_<wbr>stop_<wbr>bf</b> is True, then the algorithm will hard-stop once the covariate set chosen to match on has a balancing factor lower than this value.</td>
 								</tr>
 								</tbody>
 							</table>
@@ -337,26 +337,26 @@ outcome_column_name, return_vals=<span class="number">1</span>)</div>
 						  <table class="table table-striped" style="margin-bottom:15px;width:95%;margin-left:auto;margin-right:auto">
 							<tbody>
 							  <tr>
-								<td class="pwidth"><b>return_df:</b><br>Dataframe, required</td>
+								<td class="pwidth"><b>return_<wbr>df:</b><br>Dataframe, required</td>
 								<td>The dataframe containing all of the matches, obtained from the first element in the output of the algorithm.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>unit_id:</b><br>integer, required</td>
+								<td class="pwidth"><b>unit_<wbr>id:</b><br>integer, required</td>
 								<td>The index identification for the unit of interest.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>input_data:</b><br>Dataframe, required</td>
+								<td class="pwidth"><b>input_<wbr>data:</b><br>Dataframe, required</td>
 								<td>Dataframe containing the original dataset which has already been matched using DAME.</td>
 							  </tr><tr>
 								<td class="pwidth"><b>treatment_<wbr>column_<wbr>name:</b><br>string, required</td>
 								<td>The name of the column in <b>input_data</b> which specifies whether a unit is treated or control.</td>
 							  </tr><tr>
 								<td class="pwidth"><b>outcome_<wbr>column_<wbr>name:</b><br>string, required</td>
-								<td>The name of the column in <b>input_data</b> which specifies each unit outcome.</td>
+								<td>The name of the column in <b>input_<wbr>data</b> which specifies each unit outcome.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>output_style:</b><br>integer, optional (default = 1)</td>
+								<td class="pwidth"><b>output_<wbr>style:</b><br>integer, optional (default = 1)</td>
 								<td>If 1, include only the covariates matched on in the output.<br>
 								If 2, include all attributes in the output.</td>
 							  </tr><tr>
-								<td class="pwidth"><b>return_vals:</b><br>integer, optional (default = 1)</td>
+								<td class="pwidth"><b>return_<wbr>vals:</b><br>integer, optional (default = 1)</td>
 								<td>If 0, print the main matched group and treatment effect for the specified unit (fancy version).<br>
 								Else, return the main matched group and treatment effect for the specified unit with no print statement (default version).</td>
 							  </tr>
