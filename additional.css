@@ -474,6 +474,22 @@ tr[data-href] {
 	padding:0px;
 }
 
+.choosingLink {
+	float:right;
+	margin-right:30px;
+	font-weight:normal;
+	font-size:1rem;
+	opacity:0.5
+}
+
+.choosing thead:hover .choosingLink {
+	opacity:1;
+}
+
+.choosingLink:hover {
+	opacity:1;
+}
+
 .choosingPlus .fa-plus-square-o {
 	color: #808080;
 }
